@@ -1,14 +1,10 @@
 //your code here
 
-    let textArea = document.getElementById("evaluatedText");
-let h3 = document.getElementById("letterCount");
+    let textTag=document.getElementById('evaluatedText');
+let headerTag=document.getElementById('letterCount');
 
-textArea.addEventListener("keyup", () => {
-  func();
-});
+document.getElementById('evaluatedText').addEventListener("keyup",function(){
+let textValue=textTag.value;
+headerTag.innerHTML=textValue.length;
 
-let func = () => {
-  console.log("helli");
-  let count = textArea.value.length;
-  h3.innerText = count;
-};
+})
