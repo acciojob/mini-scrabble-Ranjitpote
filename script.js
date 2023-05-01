@@ -1,10 +1,7 @@
-//your code here
+let evaluatedText = document.getElementById("evaluatedText");
+let letterCount = document.getElementById("letterCount");
 
-    let textTag=document.getElementById('evaluatedText');
-let headerTag=document.getElementById('letterCount');
-
-document.getElementById('evaluatedText').addEventListener("keyup",function(){
-let textValue=textTag.value;
-headerTag.innerHTML=textValue.length;
-
-})
+evaluatedText.addEventListener('input', () => {
+	let str = evaluatedText.value;
+	letterCount.innerHTML = `${str.length}`;
+});
